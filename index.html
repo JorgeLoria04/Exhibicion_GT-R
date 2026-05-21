@@ -45,19 +45,34 @@
         }
     </style>
 
-    <h1 style="font-size: 50px;">NISSAN GT-R NISMO: EL MITO DE GODZILLA</h1>
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="Galeria.html">Galería</a>
-        <a href="Multimedia.html">Multimedia</a>
-    </nav>
+    <header>
+            <h1 style="font-size: 50px;">NISSAN GT-R NISMO: EL MITO DE GODZILLA</h1>
 
-    <p align = "right" style="text-align: right;">
-       <img src="Imagenes/LOGO.svg" alt="Logo GT-R" width="120">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
-    </p>
+            <!-- Menú de navegación -->
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="Galeria.html">Galería</a>
+            <a href="Multimedia.html">Multimedia</a>
+        </nav>
 
+        <!-- Logo (Se pone en la etiqueta p simplemente por diseño) -->
+        <p align = "right" style="text-align: right;">
+            <img src="Imagenes/LOGO.svg" alt="Logo GT-R" width="120">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+        </p>
+
+        <!-- Audio de fondo (Se pone en etiqueta p por diseño) -->
+        <p align="center">
+            <audio controls muted autoplay loop>
+            <source src="Audio/Chill.mp3">
+            </audio> 
+        </p>
+    </header>
+
+    <main>
     
-<br><br>
+    <br><br>
+
+    <!-- Marcadores -->
     <nav>
         <a href="#Cita">Ver opinión de los expertos</a>
         <a href="#Glosario">Ir al glosario</a>
@@ -67,9 +82,7 @@
         El Nissan <strong>GT-R Nismo</strong>, representa la máxima evolución del legendario superdeportivo japonés, ganándose el apodo de Godzilla por su capacidad de destruir a sus rivales en la pista. <br> Esta versión desarrollada por la división de carreras de Nissan (Nismo) lleva el rendimiento a un nivel extremo, combinando tecnología de competición con un diseño aerodinámico agresivo diseño para dominar los circuitos más exigentes del mundo.
     </p><br>
 
-    <p>
-        <img src="Imagenes/GTR.jpg" alt="Nissan GT-R" width="800">
-    </p>
+        <img src="Imagenes/GTR.jpg" alt="Nissan GT-R" width="800" style="margin: auto; display: block;">
 
     <h2 id="Glosario" style="font-size: 25px;">Glosario de términos Técnicos</h2>
     <dl style="color: rgb(230,230,230); text-align: center;">
@@ -89,6 +102,7 @@
         "El Nissan GT-R Nismo no es solo un automóvil con mucha potencia; es una fuerza de la naturaleza. <br> La forma en que el sistema de tracción integral gestiona los 600 caballos en las curvas te hace sentir que estás desafiando las leyes de la física en cada vuelta de circuito."
     </blockquote>
 
+    <!-- Formulario para solicitar información adicional -->
     <h2>Querés recibir información exclusiva de Godzilla?</h2>
     <form action="#" method="post">
         <section style="text-align: center;">
@@ -113,5 +127,10 @@
         </section>
         
     </form>
+
+    <br>
+
+</main>
+    <footer style="color: rgb(180, 180, 180); text-align: center;"> &copy; Esta página cuenta con derechos de autor</footer>
 </body>
 </html>
