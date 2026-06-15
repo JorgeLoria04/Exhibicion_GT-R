@@ -4,50 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exhibición GT-R - Multimedia</title>
+    <link rel="stylesheet" href="assets/CSS/style.css">
 </head>
 <body>
-    <style>
-        body{
-            background-color: rgb(0, 0, 0);
-        }
-
-        h1{
-            color: rgb(219, 0, 0);
-            text-align: center;
-        }
-
-        h2{
-            color: rgb(219, 0, 0);
-            text-align: center;
-        }
-
-        a{
-            color: rgb(180, 180, 180);
-            font-size: 20px;
-        }
-
-        nav{
-            text-align: center;
-        }
-
-        p{
-            text-align: center;
-            color: rgb(230,230,230);
-        }
-
-        blockquote{
-            color: rgb(230,230,230);
-            text-align: center;
-        }
-
-        label{
-            color: rgb(230,230,230);
-        }
-    </style>
     <header>
-            <h1 style="font-size: 50px;">Rendimiento puro y Especificaciones</h1>
+            <h1 class="Titulo">Rendimiento puro y Especificaciones</h1>
               <!-- Menú de navegación -->
-        <nav>
+        <nav class="navbar">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="Galeria.html">Galería</a></li>
@@ -56,48 +19,49 @@
         </nav>
 
         <!-- Logo (Se pone en la etiqueta p simplemente por diseño) -->
-        <p align = "right" style="text-align: right;">
-            <img src="Imagenes/LOGO.svg" alt="Logo GT-R" width="120">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+        <p class="LOGO-Multimedia">
+            <img src="assets/Imagenes/LOGO.svg" alt="Logo GT-R">
         </p>
 
         <!-- Audio de fondo (Se pone en etiqueta p por diseño) -->
-        <p align="center">
+        <p>
             <audio controls muted autoplay loop>
-            <source src="Audio/Chill.mp3" type="Audio/mp3">
-            <source src="Audio/Chill.mp3" type="Audio/mp3">
+            <source src="assets/Audio/Chill.mp3" type="Audio/mp3">
+            <source src="assets/Audio/Chill.mp3" type="Audio/mp3">
             </audio> 
         </p>
     </header>
     
 <main> 
     
-    <section align="center">
+    <section>
        <p>
          Bajo su capó de fibra de carbono se encuentra el legendario motor V6 biturbo de 3.8 litros artesanal, ajustado para liberar una potencia brutal de <strong>600 caballos de fuerza</strong>. <br> Gracias a su avanzado sistema de tracción integral (ATTESA E-TS), el GT-R Nismo se clava al suelo, logrando una aceleración de <strong>0 a 100 km/h en apenas 2.5 segundos</strong>.
-       </p><br><br>
-        <h3 style="color: rgb(219, 0, 0);"> Video homenaje Nissan GT-R</h3>
+       </p>
+       
+        <h3> Video homenaje Nissan GT-R</h3>
         <video controls muted autoplay loop width="1000px">
-        <source src="Videos/Video1.mp4" type="Video/mp4">
-        <source src="Videos/Video1.mp4" type="Video/mp4">
+        <source src="assets/Videos/Video1.mp4" type="Video/mp4">
+        <source src="assets/Videos/Video1.mp4" type="Video/mp4">
         Su navegador no soporta el video
         </video>
     </section>
 
-    <h2 style="font-size: 25px;">Review</h2>
+    <h2>Review</h2>
     <br>
 
-    <section align="center">
-      <h3 style="color: rgb(219, 0, 0);"> Video muestra Nissan GT-R</h3>
+    <section>
+      <h3> Video muestra Nissan GT-R</h3>
       <video controls muted autoplay loop width="1000px">
-        <source src="Videos/Video2.mp4" type="Video/mp4">
-        <source src="Videos/Video2.mp4" type="Video/mp4">
+        <source src="assets/Videos/Video2.mp4" type="Video/mp4">
+        <source src="assets/Videos/Video2.mp4" type="Video/mp4">
         Su navegador no soporta el video
       </video>  
     </section><br>
 
-    <section align ="Center">
-        <h3 style="color: rgb(219, 0, 0); text-align: center;">Especificaciones</h3>
-    <ul style="color: rgb(230,230,230); text-align: center;">
+    <section>
+        <h3>Especificaciones</h3>
+    <ul>
         <li>Velocidad Máxima: 315 km/h</li>
         <li>Motor: V6 Biturbo de 3.8 litros</li>
         <li>Potencia: 600 Caballos de fuerza</li>
@@ -105,9 +69,10 @@
     </ul>
     </section>
 
-    <section>
-        <h3 style="color: rgb(219, 0, 0); text-align: center;">Comparativa GT-R Estándar vs Versión Nismo</h3><br>
-      <table  border="1" style="color: rgb(230,230,230);">
+    <h3>Comparativa GT-R Estándar vs Versión Nismo</h3>
+    <div class="Comparativa">
+        
+      <table class="Tabla-Comparativa">
         <thead>
             <tr>
             <th>Especificación</th>
@@ -138,12 +103,18 @@
             </tr>
         </tfoot>   
       </table>
-    </section>
-    
-    
-        <br>
+    </div>
+
     </main>
-    <footer style="color: rgb(180, 180, 180); text-align: center;"> &copy; Esta página cuenta con derechos de autor</footer>
+    <footer> &copy; Esta página cuenta con derechos de autor
+        <p>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                src="https://jigsaw.w3.org/css-validator/images/vcss"
+                alt="¡CSS Válido!" />
+            </a>
+        </p>
+    </footer>
     
 </body>
 </html>

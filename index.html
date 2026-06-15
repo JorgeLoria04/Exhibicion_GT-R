@@ -4,52 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exhibición GT-R - Inicio</title>
+    <link rel="stylesheet" href="assets/CSS/style.css">
 </head>
 <body>
-    <style>
-        body{
-            background-color: rgb(0, 0, 0);
-        }
-
-        h1{
-            color: rgb(219, 0, 0);
-            text-align: center;
-        }
-
-        h2{
-            color: rgb(219, 0, 0);
-            text-align: center;
-        }
-
-        a{
-            color: rgb(180, 180, 180);
-            font-size: 20px;
-        }
-
-        nav{
-            text-align: center;
-        }
-
-        p{
-            text-align: center;
-            color: rgb(230,230,230);
-        }
-
-        blockquote{
-            color: rgb(230,230,230);
-            text-align: center;
-        }
-
-        label{
-            color: rgb(230,230,230);
-        }
-    </style>
-
     <header>
-            <h1 style="font-size: 50px;">NISSAN GT-R NISMO: EL MITO DE GODZILLA</h1>
+            <h1 class="Titulo">NISSAN GT-R NISMO: EL MITO DE GODZILLA</h1>
 
             <!-- Menú de navegación -->
-        <nav>
+        <nav class="navbar">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="Galeria.html">Galería</a></li>
@@ -58,14 +20,14 @@
         </nav>
 
         <!-- Logo (Se pone en la etiqueta p simplemente por diseño) -->
-        <p align = "right" style="text-align: right;">
-            <img src="Imagenes/LOGO.svg" alt="Logo GT-R" width="120">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+        <p class="LOGO">
+            <img src="assets/Imagenes/LOGO.svg" alt="Logo GT-R" width="120">
         </p>
 
         <!-- Audio de fondo (Se pone en etiqueta p por diseño) -->
-        <p align="center">
+        <p class="audio">
             <audio controls muted autoplay loop>
-            <source src="Audio/Chill.mp3">
+            <source src="assets/Audio/Chill.mp3">
             </audio> 
         </p>
     </header>
@@ -75,28 +37,36 @@
     <br><br>
 
     <!-- Marcadores -->
-    <nav>
-        <a href="#Cita">Ver opinión de los expertos</a>
-        <a href="#Glosario">Ir al glosario</a>
+    <nav class="marcadores">
+        <a class="boton-marcador" href="#Cita">📕 Ver opinión de los expertos</a>
+        <a class="boton-marcador" href="#Glosario">📕 Ir al glosario</a>
     </nav>
     
-    <p>
+    <p class="descripcion">
         El Nissan <strong>GT-R Nismo</strong>, representa la máxima evolución del legendario superdeportivo japonés, ganándose el apodo de Godzilla por su capacidad de destruir a sus rivales en la pista. <br> Esta versión desarrollada por la división de carreras de Nissan (Nismo) lleva el rendimiento a un nivel extremo, combinando tecnología de competición con un diseño aerodinámico agresivo diseño para dominar los circuitos más exigentes del mundo.
-    </p><br>
+    </p>
 
-        <img src="Imagenes/GTR.jpg" alt="Nissan GT-R" width="800" style="margin: auto; display: block;">
+    <div class="contenedor-flex">
 
-    <h2 id="Glosario" style="font-size: 25px;">Glosario de términos Técnicos</h2>
-    <dl style="color: rgb(230,230,230); text-align: center;">
-        <dt>Nismo</dt>
-        <dd>Abreviatura de "Nissan Motorsport International Limited"</dd>
-        <br>
-        <dt>VR38DETT</dt>
-        <dd>El código oficial del motor v6 de 3.8 litros</dd>
-        <br>
-        <dt>ATTESA E-TS</dt>
-        <dd>El avanzado sistema de tracción integral del GT-R</dd>
-    </dl>
+        <div class="GTR">
+           <img class="img-GTR" src="assets/Imagenes/GTR.jpg" alt="Nissan GT-R"> 
+        </div>
+
+        <div class="Glosario">    
+            <h2 id="Glosario" style="font-size: 25px;">Glosario de términos Técnicos</h2>
+            <dl id="lista-descriptiva">
+            <dt>Nismo</dt>
+            <dd>Abreviatura de "Nissan Motorsport International Limited"</dd>
+            <br>
+            <dt>VR38DETT</dt>
+            <dd>El código oficial del motor v6 de 3.8 litros</dd>
+            <br>
+            <dt>ATTESA E-TS</dt>
+            <dd>El avanzado sistema de tracción integral del GT-R</dd>
+            </dl>
+        </div>
+    </div>
+        
     <br>
 
     <h2 id="Cita">La opinión de los expertos</h2>
@@ -107,7 +77,7 @@
     <!-- Formulario para solicitar información adicional -->
     <h2>Querés recibir información exclusiva de Godzilla?</h2>
     <form action="#" method="post">
-        <section style="text-align: center;">
+        <section>
           <label for="Nombre">Nombre Completo:</label>
           <input type="text" id="Nombre" name="Nombre" required>
           <br><br>
@@ -117,15 +87,15 @@
           <label for="">Que te interesa más del GT-R?</label>
           <br>
           <label for="Motor">El motor V6</label>
-          <input type="radio" id="Motor" name="Motor">
+          <input type="radio" id="Motor" name="interes">
           <br>
           <label for="Estilo">El diseño de carbono</label>
-          <input type="radio" id="Estilo" name="Estilo">
+          <input type="radio" id="Estilo" name="interes">
           <br>
           <label for="Videos">Ver más videos</label>
-          <input type="radio" id="Videos" name="Videos" value=""> 
+          <input type="radio" id="Videos" name="interes" value=""> 
           <br><br>
-          <input type="button" value="Unirme al club Nismo"> 
+          <input type="submit" value="Unirme al club Nismo"> 
         </section>
         
     </form>
@@ -133,6 +103,14 @@
     <br>
 
 </main>
-    <footer style="color: rgb(180, 180, 180); text-align: center;"> &copy; Esta página cuenta con derechos de autor</footer>
+    <footer> &copy; Esta página cuenta con derechos de autor
+        <p>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                src="https://jigsaw.w3.org/css-validator/images/vcss"
+                alt="¡CSS Válido!" />
+            </a>
+        </p>
+    </footer>
 </body>
 </html>
