@@ -4,16 +4,9 @@
     src: url(../Fuentes/Orbitron-Regular.ttf) format(truetype);
 }
 
-/* Reinicia los margenes y bordes de la página antes de cargar el contenido */
-::before *{
-    margin: 0;
-    padding: 0;
-    background-color: white;
-}
-
 body{
     background-color: rgb(0, 0, 0);
-    padding: 20px 0; 
+    padding: 90px 0; 
 }
 
 /* Da formato a todos los títulos principales de las páginas */
@@ -22,7 +15,11 @@ body{
     color: rgb(219, 0, 0);
     text-align: center;
     text-transform: capitalize;
-    font-size: 50px;
+    font-size: 60px;
+}
+
+h1::before{
+    content: "🏁";
 }
 
 h2{
@@ -50,6 +47,10 @@ p{
     color: rgb(230,230,230);
 }
 
+.parrafo{
+    margin-top: 20px;
+}
+
 blockquote{
     color: rgb(230,230,230);
     text-align: center;
@@ -63,12 +64,16 @@ label{
 /* Crea una barra de navegación en la parte superior del sitio para viajar entre páginas */
 .navbar{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
     width: 100%;
-    height: auto;
+    height: 50px;
     position: fixed;
     top: 0;
     left: 0;
     background-color: rgba(219, 0, 0, 0.304);
+    z-index: 9999;
 }
 
 nav a{
@@ -119,40 +124,19 @@ nav li{
 }
 
 /* Da posicion y estructura al logo de la página principal */
-.LOGO{
-    display: flex;
-    position: absolute;
-    top: 56px;
-    right: 245px;
-    width: 70px;
-    height: 40px;
+.logo{
+    width: 60px;
+    height: auto;
+    margin: 0 20px;
 }
 
-/* Da posicion y estructura al logo de la página Galería*/
-.LOGO-Galeria{
-    display: flex;
-    position: absolute;
-    top: 60px;
-    right: 205px;
-    width: 70px;
-    height: 40px;
-}
-
-/* Da posicion y estructura al logo de la página Multimedia */
-.LOGO-Multimedia{
-    display: flex;
-    position: absolute;
-    top: 60px;
-    right: 325px;
-    width: 70px;
-    height: 40px;
-}
 
 .contenedor-flex{
     display: flex;
     margin: 12px 10px;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
     gap: 10px;
 }
 
@@ -184,9 +168,13 @@ input:focus{
     box-shadow: 2px 2px 3px rgb(219, 0, 0);
 }
 
+.img-GTR,.Focos-GTR,.Estructura-GTR, .Interior-GTR,video{
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
 
 .Focos-GTR{
-    width:850px;
     margin: auto; 
     display: block;
     border-radius: 50%;
@@ -200,14 +188,12 @@ input:focus{
 }
 
 .Estructura-GTR{
-    width: 500px;
     margin: auto;
     display: block;
     border-radius: 8px;
 }
 
 .Interior-GTR{
-    width: 500px;
     display: block; 
     margin: auto;
     margin-top: 50px;
@@ -215,9 +201,10 @@ input:focus{
 }
 
 
-
 .Comparativa{
-    width: 600px;
+    width: 100%;
+    /* min-width: 600px; */
+    max-width: 1100px;
     height: auto;
     margin: auto;
     border-radius: 8px;
@@ -262,4 +249,89 @@ footer{
     margin-top: 20px;
     color: rgb(180, 180, 180); 
     text-align: center;
+}
+
+/* Ajusta el diseño de la página para dispositivos de 768px o menos */
+@media (max-width:768px) {
+    .body{
+        margin: 200px;
+    }
+   
+    .Titulo{
+        font-size: 5vw;
+    }
+
+    .logo{
+        height: 30px;
+        width: 35px;
+        margin: 5px;
+    }
+
+    /* Se aplica una especie de layout shifter para cambiar el diseño de la barra de navegación de ser una barra horizontal larga a mostrarse de forma un poco más compacta */
+    .navbar{
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
+        gap: 5px;
+    }
+
+    /* Se le aplica el patrón Column Drop al glosario e imagen de la página principal, 
+    pasando de mostrarse uno al lado del otro a mostrarse apilados uno sobre el otro */
+    .contenedor-flex{
+        flex-direction: column;
+        margin: 10px 15px;
+    }
+
+    /* Los botones animados de los marcadores pasan a mostrarse uno sobre el otro para adaptarse correctamente a la página */
+    .boton-marcador{
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    /* Se le quita el efecto de transformación a la imagen de la página principal para que de muestre mejor en dispositivos pequeños */
+    .img-GTR{
+        transform: none;
+    }
+
+}
+
+/* Ajusta el diseño de la pantalla para dispositivos de minimo 768px y máximo 1024px */
+@media (min-width: 768px) and (max-width: 1024px){
+    body{
+        margin: 0px;
+    }
+
+    .parrafo{
+        align-items: center;
+        width: 50%;
+        margin: auto;
+    }
+
+    .Comparativa{
+        width: 80%;
+    }
+
+    .img-GTR{
+        max-width: 80%;
+    }
+}
+
+/* Realiza algunos ajustes visuales a la página cuando el dispositivo es de mínimo 1024px */
+@media (min-width:1024px){
+    .navbar{
+        height: 100px;
+    }
+
+    .Titulo{
+        color: bisque;
+    }
+
+    .Comparativa{
+        width: 90%;
+    }
+
+    .img-GTR{
+        max-width: 85%;
+    }
 }
